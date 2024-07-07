@@ -1,45 +1,55 @@
 <form action="" class="register-form">
+  <button type="button" class="return-btn">Back to welcome page</button>
   <h3 class="title">Registration form</h3>
-  <h4>Full name <span class="asterisk">*</span></h4>
-  <div>
-    <label>
-      <input type="text" name="firstName" />
-      First Name
-    </label>
-    <label>
-      <input type="text" name="lastName" />
-      Last Name
-    </label>
+  <div class="form-section">
+    <h4 class="form-header">Full name <span class="asterisk">*</span></h4>
+    <div class="info-container">
+      <label class="form-label">
+        <input type="text" name="firstName" class="form-input" />
+        First Name
+      </label>
+      <label class="form-label">
+        <input type="text" name="lastName" class="form-input" />
+        Last Name
+      </label>
+    </div>
   </div>
-
-  <h4>Address <span class="asterisk">*</span></h4>
-  <label>
-    <input type="text" name="address" />
-    Street address
-  </label>
-  <label>
-    <input type="text" name="address2" />
-    Street address Line 2
-  </label>
-
-  <div>
-    <label>
-      <input type="text" name="city" />
-      City
-    </label>
-    <label>
-      <input type="text" name="state" />
-      State/Province
-    </label>
+  <div class="form-section">
+    <h4 class="form-header">Address <span class="asterisk">*</span></h4>
+    <div class="address-container">
+      <label class="form-label">
+        <input type="text" name="address" class="form-input" />
+        Street address
+      </label>
+      <label class="form-label">
+        <input type="text" name="address2" class="form-input" />
+        Street address Line 2
+      </label>
+      <div class="info-container">
+        <label class="form-label">
+          <input type="text" name="city" class="form-input" />
+          City
+        </label>
+        <label class="form-label">
+          <input type="text" name="state" class="form-input" />
+          State / Province
+        </label>
+      </div>
+      <label class="form-label">
+        <input type="text" name="postal" class="form-input" />
+        Postal / Zip Code
+      </label>
+    </div>
   </div>
-  <label>
-    <input type="text" name="postal" />
-    Postal / Zip Code
-  </label>
-
-  <h4>Phone number <span class="asterisk">*</span></h4>
-  <input type="number" name="phone" />
-
-  <h4>E-mail</h4>
-  <input type="email" name="email" />
+  <div class="form-section">
+    <h4 class="form-header">Phone number <span class="asterisk">*</span></h4>
+    <input type="number" name="phone" class="form-input small-sized" />
+  </div>
+  <div class="form-section">
+    <h4 class="form-header">E-mail</h4>
+    <input type="email" name="email" class="form-input small-sized" />
+    <label class="form-label" for="email">example&#64;example.com</label>
+  </div>
+  <hr />
+  <button type="submit" class="submit-btn">Submit</button>
 </form>

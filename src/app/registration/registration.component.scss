@@ -1,12 +1,87 @@
 .register-form {
+    position: relative;
     display: flex;
     flex-direction: column;
-    margin: auto;
-    width: 700px;
+    gap: 25px;
+    
+}
+.return-btn {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    height: 20px;
+    width: 140px;
+    text-align: center;
+    font-size: 12px;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid lightgray;
+    color: gray;
+}
+.return-btn:hover,
+.return-btn:focus {
+    border: 2px solid pink;
 }
 .asterisk {
     color: red;
 }
 .title {
     text-align: center;
+}
+.form-header {
+    font-weight: 500;
+    font-size: 16px;
+}
+.form-label {
+    font-size: 11px;
+    font-weight: 400;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.info-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.address-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-input {
+    border: 2px solid lightgray;
+    border-radius: 4px;
+    height: 30px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+.small-sized {
+    width: 275px;
+}
+hr {
+    border: none;
+    border-top: 1px solid lightgray;
+    margin: 0;
+}
+.submit-btn {
+    margin-left: 10px;
+    width: 150px;
+    height: 40px;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid lightgray;
+    color: gray;
+}
+.submit-btn:hover,
+.submit-btn:focus {
+    border: 2px solid rgb(47, 232, 47);
 }

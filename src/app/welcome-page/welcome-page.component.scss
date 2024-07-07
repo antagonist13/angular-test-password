@@ -1,0 +1,22 @@
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.link {
+width: 150px;
+    height: 40px;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid gray;
+    color: gray;
+}
+
+.link:hover,
+.link:focus {
+    border: 2px solid pink;
+}
