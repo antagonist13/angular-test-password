@@ -41,19 +41,42 @@
     flex-direction: column;
     width: 100%;
 }
-.form-name-section {
+.form-small-section {
 width: 100%;
 display: flex;
 position: relative;
 flex-direction: column;
 }
-.valivation-text {
+.form-large-section {
+    position: relative;
+
+    .validation-text {
+            top: 41px;
+            left: 75px;
+        }
+}
+.validation-text {
     position: absolute;
     top: 41px;
     left: 60px;
     font-size: 11px;
         font-weight: 400;
         color: red;
+}
+.validation-city {
+    left: 25px;
+}
+.validation-state{
+    left: 85px;
+}
+.validation-postal{
+    left: 90px !important;
+}
+.validation-phone {
+    left: 10px;
+}
+.validation-email {
+    left: 122px;
 }
 .form-section {
     display: flex;
@@ -94,8 +117,17 @@ hr {
     text-align: center;
     border: 1px solid lightgray;
     color: gray;
+    margin-bottom: 100px;
 }
 .submit-btn:hover,
 .submit-btn:focus {
     border: 2px solid rgb(47, 232, 47);
+}
+.logo-img {
+    width: 70px;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    border: 2px solid green;
+    border-radius: 4px;
 }
