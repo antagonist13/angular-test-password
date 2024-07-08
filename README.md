@@ -6,7 +6,7 @@ This is a form for a test assignment. It features routing between tabs, a user-f
 
 # Features
 
-Routing between tabs: Navigate through different sections of the form seamlessly.
-User-friendly form: Easy-to-fill-out form with a clean and intuitive design.
-Data validation: Ensures that all required fields are correctly filled out before submission.
-Template masks with ngx-mask: Utilizes ngx-mask for input masking, providing a better user experience.
+**Routing between tabs**: Navigate through different sections of the form seamlessly.  
+**User-friendly form**: Easy-to-fill-out form with a clean and intuitive design.  
+**Data validation**: Ensures that all required fields are correctly filled out before submission.  
+**Template masks with ngx-mask**: Utilizes ngx-mask for input masking, providing a better user experience.
