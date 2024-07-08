@@ -3,6 +3,7 @@
     Back to welcome page
   </button>
   <h3 class="title">Registration form</h3>
+
   <div class="form-section">
     <h4 class="form-header">Full name <span class="asterisk">*</span></h4>
     <div class="info-container">
@@ -15,6 +16,14 @@
         />
         First Name
       </label>
+      <div
+        *ngIf="
+          _firstName?.invalid && (_firstName?.touched || _firstName?.dirty)
+        "
+      >
+        <span *ngIf="_firstName?.errors?.['minlength']">Min 2 symbols</span>
+        <span *ngIf="_firstName?.errors?.['required']">Field is required</span>
+      </div>
       <label class="form-label">
         <input
           formControlName="lastName"
@@ -38,6 +47,7 @@
         />
         Street address
       </label>
+
       <label class="form-label">
         <input
           formControlName="address2"
@@ -47,6 +57,7 @@
         />
         Street address Line 2
       </label>
+
       <div class="info-container">
         <label class="form-label">
           <input
@@ -57,6 +68,7 @@
           />
           City
         </label>
+
         <label class="form-label">
           <input
             formControlName="state"
@@ -67,6 +79,7 @@
           State / Province
         </label>
       </div>
+
       <label class="form-label">
         <input
           formControlName="postal"
@@ -78,6 +91,7 @@
       </label>
     </div>
   </div>
+
   <div class="form-section">
     <h4 class="form-header">Phone number <span class="asterisk">*</span></h4>
     <input
@@ -87,6 +101,7 @@
       class="form-input small-sized"
     />
   </div>
+
   <div class="form-section">
     <h4 class="form-header">E-mail</h4>
     <input
@@ -97,6 +112,7 @@
     />
     <label class="form-label" for="email">example&#64;example.com</label>
   </div>
+
   <hr />
   <button type="submit" class="submit-btn">Submit</button>
 </form>
