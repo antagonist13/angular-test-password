@@ -23,7 +23,7 @@ export class RegistrationComponent {
     state: new FormControl<string | null>(null),
     postal: new FormControl<string | null>(null),
     phone: new FormControl<string | null>(null),
-    email: new FormControl<string | null>(null, [Validators.required, Validators.email]),
+    email: new FormControl<string | null>(null, [Validators.email]),
   });
 
   navigateToWelcomePage() {
