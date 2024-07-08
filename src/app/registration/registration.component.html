@@ -7,32 +7,46 @@
   <div class="form-section">
     <h4 class="form-header">Full name <span class="asterisk">*</span></h4>
     <div class="info-container">
-      <label class="form-label">
-        <input
-          formControlName="firstName"
-          type="text"
-          name="firstName"
-          class="form-input"
-        />
-        First Name
-      </label>
-      <div
-        *ngIf="
-          _firstName?.invalid && (_firstName?.touched || _firstName?.dirty)
-        "
-      >
-        <span *ngIf="_firstName?.errors?.['minlength']">Min 2 symbols</span>
-        <span *ngIf="_firstName?.errors?.['required']">Field is required</span>
+      <div class="form-name-section">
+        <label class="form-label">
+          <input
+            formControlName="firstName"
+            type="text"
+            name="firstName"
+            class="form-input"
+          />
+          First Name
+        </label>
+        <div
+          *ngIf="
+            _firstName?.invalid && (_firstName?.touched || _firstName?.dirty)
+          "
+          class="valivation-text"
+        >
+          <span *ngIf="_firstName?.errors?.['minlength']">Min 2 symbols</span>
+          <span *ngIf="_firstName?.errors?.['required']"
+            >Field is required</span
+          >
+        </div>
       </div>
-      <label class="form-label">
-        <input
-          formControlName="lastName"
-          type="text"
-          name="lastName"
-          class="form-input"
-        />
-        Last Name
-      </label>
+      <div class="form-name-section">
+        <label class="form-label">
+          <input
+            formControlName="lastName"
+            type="text"
+            name="lastName"
+            class="form-input"
+          />
+          Last Name
+        </label>
+        <div
+          *ngIf="_lastName?.invalid && (_lastName?.touched || _lastName?.dirty)"
+          class="valivation-text"
+        >
+          <span *ngIf="_lastName?.errors?.['minlength']">Min 2 symbols</span>
+          <span *ngIf="_lastName?.errors?.['required']">Field is required</span>
+        </div>
+      </div>
     </div>
   </div>
   <div class="form-section">

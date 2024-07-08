@@ -30,6 +30,9 @@ export class RegistrationComponent {
   get _firstName() {
         return this.form.get('firstName');
   }
+  get _lastName() {
+        return this.form.get('lastName');
+  }
   
   navigateToWelcomePage() {
     this.router.navigate(['/']);

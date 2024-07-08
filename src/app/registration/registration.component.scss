@@ -41,6 +41,20 @@
     flex-direction: column;
     width: 100%;
 }
+.form-name-section {
+width: 100%;
+display: flex;
+position: relative;
+flex-direction: column;
+}
+.valivation-text {
+    position: absolute;
+    top: 41px;
+    left: 60px;
+    font-size: 11px;
+        font-weight: 400;
+        color: red;
+}
 .form-section {
     display: flex;
     flex-direction: column;
