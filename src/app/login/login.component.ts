@@ -59,8 +59,6 @@ export class LoginComponent {
     return ['weak', '', '']
   }
   validateEnglishInput(event: any) {
-      console.log(event.target.name);
-      
     const input = event.target.value;
     const englishInput = input.replace(/[^A-Za-z0-9!"#$%&'()*+,-./:;<=>?@[\\\]^_`{|}~]/g, '');
     event.target.value = englishInput;
