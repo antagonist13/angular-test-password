@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-test-password": {
+    "angular-password-strength": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-test-password",
+            "outputPath": "dist/angular-password-strength",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-test-password:build:production"
+              "buildTarget": "angular-password-strength:build:production"
             },
             "development": {
-              "buildTarget": "angular-test-password:build:development"
+              "buildTarget": "angular-password-strength:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "angular-test-password:build"
+            "buildTarget": "angular-password-strength:build"
           }
         },
         "test": {

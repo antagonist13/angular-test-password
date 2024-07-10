@@ -1,0 +1,71 @@
+<form class="login-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <button (click)="navigateToWelcomePage()" class="return-btn" type="button">
+    Back to welcome page
+  </button>
+  <img
+    src="../../assets/images/usense-company-logo.png"
+    alt="usense company logo"
+    class="logo-img"
+  />
+
+  <div class="form-section">
+    <h4 class="form-header">Log in <span class="asterisk">*</span></h4>
+    <div class="info-container">
+      <div class="form-small-section">
+        <label class="form-label">
+          <input
+            formControlName="login"
+            type="text"
+            name="firstName"
+            class="form-input"
+          />
+          Login
+        </label>
+        <div
+          *ngIf="_login?.invalid && _login?.touched"
+          class="validation-text validation-login"
+        >
+          <span *ngIf="_login?.errors?.['minlength']">Minimum 2 symbols</span>
+          <span *ngIf="_login?.errors?.['required']">Field is required</span>
+        </div>
+      </div>
+      <div class="form-small-section">
+        <label class="form-label">
+          <input
+            formControlName="password"
+            type="password"
+            name="lastName"
+            class="form-input"
+            (input)="checkPasswordStrength()"
+          />
+          Password
+        </label>
+        <div
+          *ngIf="_password?.invalid && _password?.touched"
+          class="validation-text"
+        >
+          <span *ngIf="_password?.errors?.['minlength']"
+            >Minimum 8 symbols</span
+          >
+          <span *ngIf="_password?.errors?.['required']">Field is required</span>
+        </div>
+        <div class="password-strength">
+          <div
+            [ngClass]="passwordStrengthClass[0]"
+            class="strength-indicator"
+          ></div>
+          <div
+            [ngClass]="passwordStrengthClass[1]"
+            class="strength-indicator"
+          ></div>
+          <div
+            [ngClass]="passwordStrengthClass[2]"
+            class="strength-indicator"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <button type="submit" class="submit-btn">Submit</button>
+</form>
