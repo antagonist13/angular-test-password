@@ -12,5 +12,5 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'angular-password-stregth';
+  title = 'angular-test-password';
 }
