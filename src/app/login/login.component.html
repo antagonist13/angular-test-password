@@ -16,8 +16,9 @@
           <input
             formControlName="login"
             type="text"
-            name="firstName"
+            name="login"
             class="form-input"
+            (input)="validateEnglishInput($event)"
           />
           Login
         </label>
@@ -34,9 +35,10 @@
           <input
             formControlName="password"
             type="password"
-            name="lastName"
+            name="password"
             class="form-input"
             (input)="checkPasswordStrength()"
+            (input)="validateEnglishInput($event)"
           />
           Password
         </label>

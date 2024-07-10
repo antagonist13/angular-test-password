@@ -58,6 +58,20 @@ export class LoginComponent {
 
     return ['weak', '', '']
   }
+  validateEnglishInput(event: any) {
+      console.log(event.target.name);
+      
+    const input = event.target.value;
+    const englishInput = input.replace(/[^A-Za-z0-9!"#$%&'()*+,-./:;<=>?@[\\\]^_`{|}~]/g, '');
+    event.target.value = englishInput;
+    if ( event.target.name === 'password') {
+      this.form.get('password')?.setValue(englishInput, { emitEvent: false });
+    }
+    if ( event.target.name === 'login') {
+      this.form.get('login')?.setValue(englishInput, { emitEvent: false });
+    }
+    
+  }
 
 
   navigateToWelcomePage() {
